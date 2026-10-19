@@ -1,0 +1,9 @@
+cat << 'EOF' >> .gitignore
+
+# Ambientes virtuais em qualquer subpasta
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+EOF
