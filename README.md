@@ -58,7 +58,8 @@ Identificar agrupamentos naturais em bases de dados de clientes (analisando fato
 **JUSTIFICATIVA:** Demonstração prática do uso de amostragens para testes rápidos de prototipação e redução de esforço computacional em grandes volumes de dados.
 
 ### Transformação de Dados (Padronização)
-**AÇÃO:** Aplicação do StandardScaler do scikit-learn.**JUSTIFICATIVA:** Algoritmos de agrupamento dependem da distância entre vetores no espaço euclidiano. Variáveis na ordem de dezenas de milhares (ex.: `CREDIT_LIMIT`) sobrepujariam variáveis limitadas ao intervalo $[0, 1]$ (ex.: `PURCHASES_FREQUENCY`). A padronização centraliza cada atributo na média $\mu = 0$ com desvio padrão unitário $\sigma = 1
+**AÇÃO:** Aplicação do StandardScaler do scikit-learn.
+**JUSTIFICATIVA:** Algoritmos de agrupamento dependem da distância entre vetores no espaço euclidiano. Variáveis na ordem de dezenas de milhares (ex.: `CREDIT_LIMIT`) sobrepujariam variáveis limitadas ao intervalo $[0, 1]$ (ex.: `PURCHASES_FREQUENCY`). A padronização centraliza cada atributo na média $\mu = 0$ com desvio padrão unitário $\sigma = 1
 
 ### Redução de Dimensionalidade (PCA)
 **AÇÃO:** Projeção linear do espaço de 17 atributos para 2 Componentes Principais (`n_components=2`).
