@@ -46,23 +46,23 @@ Identificar agrupamentos naturais em bases de dados de clientes (analisando fato
 ## Etapas de Pré-Processamento Implementadas
 
 ### Eliminação manual de atributos
-**AÇÃO:** Remoção da coluna `CUST_ID`.
+**AÇÃO:** Remoção da coluna `CUST_ID`. </br>
 **JUSTIFICATIVA:** O identificador exclusivo do cliente constitui uma chave artificial sem padrão estatístico generalizável. Sua permanência distorce métricas de distância geométrica (como a Distância Euclidiana).
 
 ### Limpeza de Dados (Tratamento de Dados Faltantes)
-**AÇÃO:** Identificação de nulos em `CREDIT_LIMIT` (1 registro) e `MINIMUM_PAYMENTS`.
+**AÇÃO:** Identificação de nulos em `CREDIT_LIMIT` (1 registro) e `MINIMUM_PAYMENTS`.</br>
 **JUSTIFICATIVA:** Ambas as variáveis apresentam distribuições assimétricas com caudas longas (outiliers). A mediana preserva a integridade volumétrica da base sem sofrer as distorções que a média provocaria.
 
 ### Amostragem de Dados
-**AÇÃO:** Extração de subconjunto representativo de 30% da base via amostragem aleatória simples (`random_state=42`).
+**AÇÃO:** Extração de subconjunto representativo de 30% da base via amostragem aleatória simples (`random_state=42`).</br>
 **JUSTIFICATIVA:** Demonstração prática do uso de amostragens para testes rápidos de prototipação e redução de esforço computacional em grandes volumes de dados.
 
 ### Transformação de Dados (Padronização)
-**AÇÃO:** Aplicação do StandardScaler do scikit-learn.
+**AÇÃO:** Aplicação do StandardScaler do scikit-learn.</br>
 **JUSTIFICATIVA:** Algoritmos de agrupamento dependem da distância entre vetores no espaço euclidiano. Variáveis na ordem de dezenas de milhares (ex.: `CREDIT_LIMIT`) sobrepujariam variáveis limitadas ao intervalo $[0, 1]$ (ex.: `PURCHASES_FREQUENCY`). A padronização centraliza cada atributo na média $\mu = 0$ com desvio padrão unitário $\sigma = 1
 
 ### Redução de Dimensionalidade (PCA)
-**AÇÃO:** Projeção linear do espaço de 17 atributos para 2 Componentes Principais (`n_components=2`).
+**AÇÃO:** Projeção linear do espaço de 17 atributos para 2 Componentes Principais (`n_components=2`).</br>
 **JUSTIFICATIVA:** Além de condensar as direções de máxima variância global dos dados, viabiliza a inspeção visual da distribuição de densidade em gráficos de dispersão bidimensionais.
 
 ---
