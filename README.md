@@ -65,21 +65,6 @@ Identificar agrupamentos naturais em bases de dados de clientes (analisando fato
 **AÇÃO:** Projeção linear do espaço de 17 atributos para 2 Componentes Principais (`n_components=2`).</br>
 **JUSTIFICATIVA:** Além de condensar as direções de máxima variância global dos dados, viabiliza a inspeção visual da distribuição de densidade em gráficos de dispersão bidimensionais.
 
----
-
-## Próximos Passos
-0. Pré-Processamento Concluído;
-1. Otimização de Hiperparâmetros;
-    - Método do Cotovelo;
-    - Coeficiente de Silhueta para k de 2 a 10.
-2. Treinamento de Modelagem
-    - Modelo Principal: K-Means com K ótimo;
-    - Modelo Comparativo: DBSCAN ou Agrupamento Hierárquico.
-3. Interpretação Semântica dos Perfis (Personas)
-4. Finalização dos Entregáveis;
-    - Relatório Técnico em PDF;
-    - Estruturação dos Slides de Apresentação.
-
 ---  
 
 ## Instruções de Instalação e Execução
@@ -110,6 +95,6 @@ Identificar agrupamentos naturais em bases de dados de clientes (analisando fato
     ```
 5. Execute o Jupyter Notebook:
     ```
-    jupyter notebook pre_processamento_tp1.ipynb
+    jupyter notebook implementacao.ipynb
 
     ```
