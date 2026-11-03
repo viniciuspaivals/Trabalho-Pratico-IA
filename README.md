@@ -63,7 +63,7 @@ Identificar agrupamentos naturais em bases de dados de clientes (analisando fato
 
 ### Redução de Dimensionalidade (PCA)
 **AÇÃO:** Projeção linear do espaço de 17 atributos para 2 Componentes Principais (`n_components=2`).</br>
-**JUSTIFICATIVA:** Além de condensar as direções de máxima variância global dos dados, viabiliza a inspeção visual da distribuição de densidade em gráficos de dispersão bidimensionais.
+**JUSTIFICATIVA:** Além de condensar as direções de máxima variância global dos dados, viabiliza a inspeção visual da distribuição de densidade em gráficos de dispersão bidimensionais
 
 ---  
 
